@@ -1,5 +1,7 @@
 def V(s, gamma=0.99):
+    print('Start V state:%s' %(s))
     V = R(s) + gamma * max_V_on_next_state(s)
+    print('End V state:%s, value:%f' %(s,V))
     return V
 
 
@@ -59,5 +61,5 @@ def transit_func(s, a):
 
 if __name__ == "__main__":
     print(V("state"))
-    print(V("state_up_up"))
-    print(V("state_down_down"))
+    #print(V("state_up_up"))
+    #print(V("state_down_down"))
